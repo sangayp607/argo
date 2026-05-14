@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sangayapp
-  namespace: sangay
+  name: argocd-app-demo
+  namespace: argocd
 spec:
   project: default
   source:
@@ -11,7 +11,7 @@ spec:
     path: . 
   destination:
     server: https://kubernetes.default.svc
-    namespace: 
+    namespace: default
   syncPolicy:
     automated:
       prune: true

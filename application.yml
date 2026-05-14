@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd-app-demo
-  namespace: argocd
+  name: sangayapp
+  namespace: sangay
 spec:
   project: default
   source:
-    repoURL: https://github.com/Mudassir-dev0ps/argo.git
+    repoURL: https://github.com/sangayp607/argo.git
     targetRevision: master
     path: . 
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: 
   syncPolicy:
     automated:
       prune: true
